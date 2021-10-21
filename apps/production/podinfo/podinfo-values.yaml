@@ -10,7 +10,7 @@ spec:
   values:
     ingress:
       hosts:
-        - host: podinfo.scottsmith.me.uk
+        - host: pod-info.scottsmith.me.uk
           paths:
             - path: /
               pathType: ImplementationSpecific
