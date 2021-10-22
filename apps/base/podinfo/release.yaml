@@ -22,3 +22,5 @@ spec:
     cache: redis-master.redis:6379
     ingress:
       enabled: true
+      annotations:
+        kubernetes.io/tls-acme: "true"

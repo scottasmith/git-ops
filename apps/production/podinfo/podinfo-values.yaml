@@ -8,6 +8,7 @@ spec:
     spec:
       version: ">=1.0.0"
   values:
+    host: pod-info.scottsmith.me.uk 
     ingress:
       hosts:
         - host: pod-info.scottsmith.me.uk
