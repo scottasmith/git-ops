@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: website-env
+  namespace: wordpress
+data:
+  WORDPRESS_AUTH_KEY: "BmWp<]^x-l=|U[21u.rLuNvd|z_cPsq2R)Nd@+xL{-CB127& 9YR.+Fz8_)Np>3"
+  WORDPRESS_SECURE_AUTH_KEY: "- ,[6o};c@a Q)8 Ad(%DV,nwpq69[)3KMWY f6#-J%Ug0+K4xXg4st%I2XtD3|H"
+  WORDPRESS_LOGGED_IN_KEY: ":6W~R[[Hi#T]~.H61Ppojh^C1pYKmqtd[qIf4bk`spUZKKk6@zrntf7=2p`!fKen"
+  WORDPRESS_NONCE_KEY: "e-l+n[0pO9]4?hrqozhT$wdm`2@~7wl6SO-1brDU5u+X^b{y0nZ_K?*DW1BXd*n{"
+  WORDPRESS_AUTH_SALT: "p]SO#==9qm$g)Mtq77bs|@l_Cmdn`iNlBuzz#_k @V/-#P+d(}wTb>hg+.6eN$Dl"
+  WORDPRESS_SECURE_AUTH_SALT: ":eZ4-?C)~$L#DPKg+jU4.RH}?t?t2l!rT[t1?0N(oMFt. M?b&$}o1`FO6)S*?E|"
+  WORDPRESS_LOGGED_IN_SALT: "bksLhJ~{gTUg`^Cbalz!O0O(kf2J5p;cKkRN^>;AKhGV]Lr-mXT#;gq~b.#>o^{2"
+  WORDPRESS_NONCE_SALT: "%odmDv%qF~l!4>i}8;.oVpw-R;x0[S2L)}?Tvz]4nQ*a%Jdt #nD+17yu>Tu+=;e"

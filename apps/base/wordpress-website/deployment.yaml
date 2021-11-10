@@ -1,0 +1,31 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: wordpress
+  name: website
+  labels:
+    app: website
+spec:
+  selector:
+    matchLabels:
+      app: website
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      namespace: wordpress
+      labels:
+        app: website
+    spec:
+      containers:
+        - name: website
+          image: wordpress
+          envFrom:
+            - secretRef: 
+              name: website-mysql
+            - configMapRef: 
+              name: website-env
+          ports:
+            - containerPort: 80
