@@ -13,6 +13,7 @@ spec:
   path: ./apps/production
   prune: true
   validation: client
+  healthChecks:
     - apiVersion: apps/v1
       kind: Deployment
       name: website
