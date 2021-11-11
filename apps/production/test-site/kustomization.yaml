@@ -4,6 +4,7 @@ namespace: test
 resources:
   - namespace.yaml
   - deployment.yaml
+  - service.yaml
   - ingress.yaml
   - test-image-registry.yaml
   - test-image-policy.yaml
