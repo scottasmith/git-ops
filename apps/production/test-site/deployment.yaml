@@ -1,0 +1,25 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-website
+  labels:
+    app: test-website
+spec:
+  selector:
+    matchLabels:
+      app: test-website
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: test-website
+    spec:
+      containers:
+        - name: test-website
+          image: scottsmith/test-image:1.0.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
