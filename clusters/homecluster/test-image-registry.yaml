@@ -3,7 +3,6 @@ apiVersion: image.toolkit.fluxcd.io/v1beta1
 kind: ImageRepository
 metadata:
   name: test-image
-  namespace: test
 spec:
   image: scottsmith/test-image
   interval: 1m0s
