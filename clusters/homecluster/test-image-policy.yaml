@@ -6,8 +6,8 @@ metadata:
   namespace: flux-system
 spec:
   filterTags:
-    extract: ts
-    pattern: '^(?P<ts>[0-9]+)'
+    extract: $ts
+    pattern: ^(?P<ts>[0-9]+)
   imageRepositoryRef:
     name: test-image
   policy:
