@@ -5,7 +5,8 @@ namespace: test
 resources:
   - flux-system-automation.yaml
   - test-image-policy.yaml
-  - test-image-registry.yaml  - namespace.yaml
+  - test-image-registry.yaml
+  - namespace.yaml
   - deployment.yaml
   - service.yaml
   - ingress.yaml
