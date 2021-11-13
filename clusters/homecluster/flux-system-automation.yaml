@@ -23,3 +23,28 @@ spec:
   update:
     path: ./clusters/homecluster
     strategy: Setters
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageUpdateAutomation
+metadata:
+  name: apps
+  namespace: flux-system
+spec:
+  git:
+    checkout:
+      ref:
+        branch: master
+    commit:
+      author:
+        email: smitherz82@gmail.com
+        name: fluxcdbot
+      messageTemplate: '{{range .Updated.Images}}{{println .}}{{end}}'
+    push:
+      branch: master
+  interval: 1m0s
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  update:
+    path: ./app
+    strategy: Setters
