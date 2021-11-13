@@ -1,0 +1,24 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: test
+  name: test
+  labels:
+    app: test
+spec:
+  selector:
+    matchLabels:
+      app: test
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: test
+    spec:
+      containers:
+        - name: test
+          image: scottsmith/test-image:1 # {"$imagepolicy": "flux-system:test-image"}
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
