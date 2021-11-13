@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: test-website
-          image: scottsmith/test-image:1 # {"$imagepolicy": "flux-system:test-image"}
+          image: scottsmith/test-image:1 # {"$imagepolicy": "flux-system:test"}
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
