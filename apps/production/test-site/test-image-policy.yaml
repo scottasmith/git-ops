@@ -9,7 +9,7 @@ spec:
     extract: $ts
     pattern: ^(?P<ts>[0-9]+)
   imageRepositoryRef:
-    name: test-image
+    name: test
   policy:
     numerical:
       order: asc
