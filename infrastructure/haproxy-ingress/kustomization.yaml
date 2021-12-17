@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: haproxy-controller
+resources:
+  - namespace.yaml
+  - service-account.yaml
+  - cluster-role.yaml
+  - cluster-role-binding.yaml
+  - config-map.yaml
+  - default-backend-deployment.yaml
+  - default-backend-service.yaml
+  - ingress-daemonset.yaml
+  - ingress-service.yaml
