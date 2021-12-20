@@ -16,6 +16,11 @@ spec:
       serviceAccountName: haproxy-kubernetes-ingress
       nodeSelector:
         node-role: haproxy-ingress
+      tolerations:
+      - key: "node-role"
+        operator: "Equal"
+        value: "haproxy-ingress"
+        effect: "NoSchedule"
       containers:
       - name: haproxy-ingress
         image: haproxytech/kubernetes-ingress

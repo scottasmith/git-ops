@@ -1,5 +1,6 @@
 #!/bin/sh
 
+export GITHUB_USERNAME="scottasmith"
 export KEY_NAME="homecluster.home.lan"
 export KEY_COMMENT="flux secrets"
 
@@ -44,3 +45,15 @@ creation_rules:
     encrypted_regex: ^(data|stringData)$
     pgp: ${KEY_FP}
 EOF
+
+ssh-keygen -q -N "" -f ./identity
+ssh-keyscan github.com > ./known_hosts
+
+printf "\nPublic key for GitHub: $(cat identity.pub)\n\n"
+
+kubectl create secret generic -n flux-system app-secrets \
+    --from-file=./identity \
+    --from-file=./identity.pub \
+    --from-file=./known_hosts
+
+rm -rf ./identity ./identity.pub known_hosts
